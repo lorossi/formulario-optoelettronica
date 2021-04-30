@@ -4,7 +4,7 @@ Un formulario per il corso di Optoelettronica - professore Daniele Ielmini
 
 ## Ultima versione
 
-**AGGIORNATO AL 28/04/2021** - [Download diretto qua](https://github.com/lorossi/formulario-optoelettronic/raw/master/formulario-optoelettronica.pdf)
+**AGGIORNATO AL 28/04/2021** - [Download diretto qua](https://github.com/lorossi/formulario-optoelettronica/raw/master/formulario-optoelettronica.pdf)
 
 ## Contenuti
 
