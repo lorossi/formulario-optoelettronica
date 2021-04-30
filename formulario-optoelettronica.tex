@@ -18,7 +18,10 @@
 \setlength{\parindent}{0em}
 \hypersetup{
 	colorlinks=true,
-	urlcolor=blue
+	urlcolor=blue,
+    colorlinks,
+    linkcolor={black},
+    citecolor={black}
 }
 
 \pagestyle{plain}
@@ -58,50 +61,91 @@
 Quest'opera è distribuita con Licenza Creative Commons - Attribuzione Non commerciale 4.0 Internazionale \ccbynceu \newline
 Questo formulario verrà espanso (ed, eventualmente, corretto) periodicamente fino a fine corso (o finché non verrà ritenuto completo). \newline
 Link repository di GitHub: \url{https://github.com/lorossi/formulario-optoelettronica} \newline
-L'ultima versione può essere scaricata direttamente cliccando \href{https://github.com/lorossi/formulario-optoelettronic/raw/master/formulario-optoelettronica.pdf}{su questo link.} \newline
+L'ultima versione può essere scaricata direttamente cliccando \href{https://github.com/lorossi/formulario-optoelettronica/raw/master/formulario-optoelettronica.pdf}{su questo link.} \newline
 In questo formulario ho cercato prima di tutto di mettere le formule importanti per la risoluzione degli esercizi, preferendole a quelle utili alla comprensione della materia.
 
-\section{Richiami di elettromagnetismo}
+\section{Onde elettromagnetiche e pacchetti d'onda}
 \begin{itemize}
-  \item Velocità pacchetto d'onda (velocità di gruppo) \( v = \dfrac{\partial \omega}{\partial k} = \dfrac{c}{N_g} \)
-  \item Velocità di fase \( v_f = \dfrac{\omega}{k} = \dfrac{c}{n}  \)
-  \item Indice di gruppo \( N_g = n - \lambda_0 \dfrac{dn}{d\lambda_0} \)
-  \item Angoli \( \theta_i \rightarrow \) fascio incidente, \( \theta_r \rightarrow \) fascio riflesso, \( \theta_t \rightarrow \) fascio trasmesso
-  \item Leggi di Snell, con \( n_1 > n_2 \)
-        \begin{enumerate}
-          \item \( \theta_i = \theta_r \)
-          \item \( n_1 \sin(\theta_i) = n_2 \sin(\theta_t) \)
-          \item Per \( \theta_i > \theta_c \) si ha riflessione interna totale (TIR), \( \theta_c = \arcsin\dfrac{n_2}{n_1} \)
-        \end{enumerate}
-  \item Tunneling ottico
-        \begin{enumerate}
-          \item Campo evanescente \( \vec{E}_t(y, z, t) \propto \exp{-\alpha_2 y} \exp{j (\omega t - k_{iz} z}) \)
-          \item Coefficiente di attenuazione \( \alpha_2 = \dfrac{2 \pi n_2}{\lambda_0} \left[\left(\dfrac{n_1}{n_2}\right)^2 \sin(\theta_i)^2 - 1\right] ^ {1/2} = \dfrac{2 \pi n_2}{\lambda_0} \left(\dfrac{\sin(\theta_i)^2}{\sin(\theta_c)^2} - 1 \right) ^ {1/2} \)
-          \item Se \( \theta_i > \theta_c\), \(\alpha_2 \) aumenta
-        \end{enumerate}
-  \item Perdita dovuta alla riflessione \( r = \dfrac{n_1-n_2}{n_1+n_2} \), \( R = r^2 \)
-  \item Perdita dovuta alla trasmissione \( t = \dfrac{2n_1}{n_1 + n_2} \)
-  \item Sfasamento
+\item Velocità di gruppo \( v = \dfrac{\partial \omega}{\partial k} = \dfrac{c}{N_g} \)
+\item Velocità di fase \( v_f = \dfrac{\omega}{k} = \dfrac{c}{n}  \)
+\item Indice di gruppo \( N_g = n - \lambda_0 \dfrac{\partial n}{\partial \lambda_0} \)
+\end {itemize}
+
+\subsection{Leggi di Snell}
+\begin{itemize}
+  \item Angoli (rispetto alla normale della superficie):
         \begin{itemize}
-          \item Dovuto alla riflessione interna \( \phi = 0 \)
-          \item Dovuto alla riflessione esterna \( \phi = \pi \)
-          \item Dovuto all'attraversamento di un mezzo di lunghezza \( d \phi = d \dfrac{2 \pi n}{\lambda_0} \)
-          \item Dovuto alla riflessione interna totale (TIR) \( \tan\left(\frac{1}{2} \Phi_\perp\right) = \dfrac{\left(\sin(\theta_1)^2 - ( d\frac{n_1}{n_2})^2 \right)}{\cos(\theta_i)} \), \( \tan(\frac{1}{2} \Phi_\parallel + \frac{1}{2} \pi) = (\dfrac{n_1}{n_2})^2 \tan(\Theta_\perp) \)
+          \item Fascio incidente \( \theta_i \)
+          \item Fascio riflesso  \( \theta_r \)
+          \item Fascio trasmesso \( \theta_t \)
         \end{itemize}
-  \item Coerenza
+  \item Prima legge \( \theta_i = \theta_r \)
+  \item Seconda legge \( n_1 \sin(\theta_i) = n_2 \sin(\theta_t) \)
+  \item Total internal reflection \( \theta_c = \arcsin\dfrac{n_2}{n_1} \)
+\end{itemize}
+
+\subsection{Riflessione e trasmissione}
+\begin{itemize}
+  \item Coefficiente di riflessione \( R = \left( \dfrac{n_2 - n_1}{n_2 + n_1} \right) ^ 2 \)
+  \item Coefficiente di trasmissione \( T = \left( \dfrac{2 n_2}{n_2 + n_1} \right) ^ 2 \)
+  \item Strato antiriflesso:
         \begin{itemize}
-          \item Spaziale \( l_c = c \cdot \Delta \nu \)
-          \item Temporale \( t_c = \frac{1}{\Delta \nu} \)
+          \item Spessore \( d = \dfrac{\lambda_0}{4 n_2} = \dfrac{\lambda}{4} \)
+          \item Indice di riflessione \( n_2 = \sqrt{n_1 n_3} \)
+          \item Riflettività \( \left( \dfrac{n_0 n_1 - n_2 }{n_0 n_1 + n_ 2} \right) ^ 2 \)
         \end{itemize}
-  \item Interferenza
+\end{itemize}
+
+\subsection{Tunneling ottico}
+\begin{itemize}
+  \item Campo evanescente \( \vec{E} \propto \exp{\{-\alpha_2 z\}} \exp{\{ i \omega t \}} \)
+  \item Coefficiente di attenuazione \( \alpha = \dfrac{2 \pi n}{\lambda} \sqrt{ \left( \dfrac{n_1}{n_2} \right) ^ 2 \sin(\theta_i) - 1} \)
+  \item Penetrazione \( \delta = \dfrac{1}{\alpha} \)
+\end{itemize}
+
+\subsection{Sfasamento}
+\begin{itemize}
+  \item Dovuto alla riflessione interna \( \phi = 0 \)
+  \item Dovuto alla riflessione esterna \( \phi = \pi \)
+  \item Dovuto all'attraversamento di un mezzo \( \partial \phi = \partial \dfrac{2 \pi n}{\lambda_0} \)
+  \item Della componente riflessa all'interfaccia:
         \begin{itemize}
-          \item Fasci individuali \( \vec{E}_1 = \vec{E}_{10} \exp{j (k r_1 - \omega t + \phi_1} \), \( \vec{E_2} = \vec{E_{20}} \exp{j (k r_2 - \omega t + \phi_2}) \)
-          \item Campo totale \( \vec{E} = \vec{E}_1 + \vec{E}_2 \)
-          \item Modulo quadro \(  |\vec{E}| ^ 2 = |\vec{E}_1| ^ 2 + |\vec{E}_2| ^ 2 + 2 \vec{E}_1 \times \vec{E}_2 \)
-          \item Intensità \(  I = I_1 + I_2 + 2 \sqrt{I_1 I_2} \cos(\delta) \) con \( \delta = k(r_2 - r_1) + \phi_2 - \phi_1 \)
+          \item Coefficiente perpendicolare \( r_\perp = \dfrac{\cos(\theta_i) - \sqrt{\left( \sfrac{n_2}{n_1} \right) ^ 2 - \sin^2(\theta_i)}}{\cos(\theta_i) + \sqrt{\left( \sfrac{n_2}{n_1} \right) ^ 2 - \sin^2(\theta_i)}} \)
+          \item Sfasamento perpendicolare \( \Phi_\perp = 2 \arctan \left[ \dfrac{ \sqrt{\sin^2(\theta_i) - \left( \sfrac{n_2}{n_1} \right) ^ 2 } }{ \cos(\theta_i) } \right] \)
+          \item Relazione degli sfasamenti \( \tan \left( \dfrac{1}{2} \Phi_\perp + \dfrac{\pi}{2} \right) = \dfrac{1}{n ^ 2} \tan \left( \dfrac{1}{2} \Phi_\perp \right) \)
         \end{itemize}
-  \item Interferenza costruttiva \( \delta = 2m\pi\), \(I = 4 I_1 = 4 I_2 \)
-  \item Interferenza distruttiva \( \delta = 2(m + 1)\pi\), \(I = 0 \)
+\end{itemize}
+
+\subsection{Coerenza}
+\begin{itemize}
+  \item Spaziale \( l_c = c \cdot \Delta \nu \)
+  \item Temporale \( t_c = \frac{1}{\Delta \nu} \)
+\end{itemize}
+
+\subsection{Interferenza}
+\begin{itemize}
+  \item Fasci individuali \( \vec{E}_1 = \vec{E}_{10} \exp{j (k r_1 - \omega t + \phi_1} \), \( \vec{E_2} = \vec{E_{20}} \exp{j (k r_2 - \omega t + \phi_2}) \)
+  \item Campo totale \( \vec{E} = \vec{E}_1 + \vec{E}_2 \)
+  \item Modulo quadro \( \displaystyle |\vec{E}| ^ 2 = |\vec{E}_1| ^ 2 + |\vec{E}_2| ^ 2 + 2 \vec{E}_1 \times \vec{E}_2 \)
+  \item Intensità \( \displaystyle  I = I_1 + I_2 + 2 \sqrt{I_1 I_2} \cos(\delta) \) con \( \delta = k(r_2 - r_1) + \phi_2 - \phi_1 \)
+  \item Interferenza costruttiva \( \delta = 2m\pi\), \(I = 4 I_1 = 4 I_2 \) in fase
+  \item Interferenza distruttiva \( \delta = 2(m + 1)\pi\), \(I = 0 \) in quadratura
+  \item Interferomero di Young:
+        \begin{itemize}
+          \item Picchi di interferenza costruttiva \( y = \dfrac{L}{S} \lambda m \)
+          \item Intensità dei picchi \( I = I_0 ( 1 + cos\left( k \dfrac{S}{L} y \right) \)
+          \item Figure di interferenza:
+                \begin{itemize}
+                  \item Massimi \( k = \dfrac{S}{L} y = 2m \pi \)
+                  \item Minimi \( k = \dfrac{S}{L} y = 2(m+1) \pi \)
+                \end{itemize}
+        \end{itemize}
+\end{itemize}
+
+\section{Bragg Reflector - DBR}
+\begin{itemize}
+  \item Riflettanza di un riflettore a N strati \( R = \left( \dfrac{n_1 ^ {2N} - \sfrac{n_0}{n_3} \; n_2 ^ {2N}}{n_1 ^ {2N} + \sfrac{n_0}{n_3} \; n_2 ^ {2N}} \right) ^ 2 \)
+  \item FWHM \( \dfrac{\Delta \lambda}{\lambda_0} = \dfrac{4}{\pi} \arcsin \left( \dfrac{n_1 - n_2}{n_1 + n_2} \right) \)
 \end{itemize}
 
 \section {Cavità di Fabry-Perot}
@@ -124,10 +168,10 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Angolo caratteristico del modo \( \theta_m = \sqrt{1 - \left(\dfrac{n_2}{n_1} \right) ^ 2} \)
   \item Condizione di guida d'onda \( \dfrac{2 \pi n_1 (2 a)}{\lambda} \cos(\theta_m) - \Phi_m = m \pi \)
   \item Componenti del modo
-        \begin{enumerate}
+        \begin{itemize}
           \item Componente viaggiante \( \beta_m = k_1 \sin(\theta_m)\)
           \item Componente stazionaria \( \kappa_m = k_1 \cos(\theta_m) \)
-        \end{enumerate}
+        \end{itemize}
   \item Numero di modi
         \begin{itemize}
           \item V-number \(\displaystyle V = \dfrac{2 \pi a n_1}{\lambda} \sqrt{1 - \left(\dfrac{n_2}{n_1}\right) ^ 2} \)
@@ -137,7 +181,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
           \item Lunghezza di cut-off \( \lambda > \lambda_c = 4a \sqrt{n_1^2 - n_2^2} \)
         \end{itemize}
   \item Dispersione
-        \begin{enumerate}
+        \begin{itemize}
           \item Intermodale
                 \begin{itemize}
                   \item Stima della dispersione intermodale \( \Delta \tau = \dfrac{L n_1}{c} - \dfrac{L n_2}{c} \)
@@ -150,38 +194,33 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
                 \end{itemize}
           \item Di materiale
                 \begin{itemize}
-                  \item Prescinde dalla propagazione in guida e discende dalla dipendenza di n dalla lunghezza d'onda
-                  \item \(  v_g = \dfrac{d \omega}{d k} = \dfrac{c}{n - \lambda_0 \dfrac{dn}{d \lambda_0}} = \dfrac{c}{N_g} \)
+                  \item Prescinde dalla propagazione in guida e discende dalla dipendenza di \(n\) dalla lunghezza d'onda
+                  \item \( D_m = \dfrac{\Delta t}{L \Delta \lambda} \left| -\dfrac{\lambda}{c} \dfrac{\partial ^ 2}{\partial \lambda ^ 2} \right| \)
                 \end{itemize}
-        \end{enumerate}
+        \end{itemize}
 \end{itemize}
 
-\section{Bragg reflector}
-\begin{itemize}
-  \item Massima riflettanza \( R_N = \left(\dfrac{n_1^{2N} - (n_0 / n_3) \cdot n_2^{2N}}{n_1^{2N} + (n_0 / n_3) \cdot n_2^{2N}} \right) ^ 2 \) con \( N \) numero di doppi strati utilizzati
-  \item Riflettanza \( \displaystyle R = \sqrt{R_1 R_2} \)
-  \item Larghezza di banda \( \Delta \lambda \approx \dfrac{4}{\pi} \arcsin \left( \dfrac{n_1 - n_2}{n_1 + n_2} \right) \)
-\end{itemize}
+\newpage
 
 \section{Fibra ottica}
 \subsection{Fibra step index}
 \begin{itemize}
   \item Differenza di indice relativa \(  \Delta = \dfrac{n_1 - n_2}{n_1} \)
-  \item V number \(  V = \dfrac{2 \pi a}{\lambda} \sqrt{n_1^2 - n_2^2} = \dfrac{2 \pi a}{\lambda} \sqrt{2 n n_1 \Delta}\) con \(  n = \dfrac{n_1 + n_2}{2} \). Per \( V < 2.405 \) ho fibra monomodale.
+  \item V-number \(\displaystyle V = \dfrac{2 \pi a n_1}{\lambda} \sqrt{1 - \left(\dfrac{n_2}{n_1}\right) ^ 2} \) con \(  n = \dfrac{n_1 + n_2}{2} \). Per \( V < 2.405 \) ho fibra monomodale.
   \item Numero di modi \(  M \approx \dfrac{V^2}{2} \)
   \item Attenuazione in fibra \(  \alpha = - \dfrac{1}{P} \dfrac{dP}{dx} \rightarrow P = P_0 e^{-\alpha L}\), \(   E = E_0 e^{-\alpha L / 2} \)
   \item Dispersione
-        \begin{enumerate}
+        \begin{itemize}
           \item Intermodale \(  \dfrac{\Delta \tau}{L} \approx \dfrac{n_1 - n_2}{c} = \dfrac{n_1 \Delta}{c} \)
           \item Di materiale \(  \dfrac{\Delta \tau}{L} = | D_m | \Delta \lambda \) con \( D_m = -\dfrac{\lambda}{c} \dfrac{d^2 n}{d \lambda^2} \)
           \item Di guida/cromatica \(  \dfrac{\Delta \tau}{L} = | D_w | \Delta \lambda \)
           \item Sommando \( D_m \) e \( D_w \) si ottiene la dispersione cromatica \( \dfrac{\Delta \tau}{L} = | D_m + D_w | \Delta \lambda = | D_{Cr} | \Delta \lambda \)
-        \end{enumerate}
+        \end{itemize}
   \item Apertura numerica (NA)
-        \begin{enumerate}
+        \begin{itemize}
           \item NA \( \displaystyle = \sqrt{n_1^2 - n_2^2} \)
           \item Angolo di accettanza massimo \( \alpha = \arcsin \left( \dfrac{\textnormal{NA}}{n_0} \right) \)
           \item V-Number \( V = \dfrac{2 \pi a}{\lambda} \textnormal{NA} \)
-        \end{enumerate}
+        \end{itemize}
 \end{itemize}
 \end{document}
