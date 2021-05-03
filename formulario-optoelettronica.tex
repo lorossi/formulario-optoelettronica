@@ -28,7 +28,7 @@
 \pagenumbering{gobble}
 
 \title{Formulario di Optoelettronica}
-\author{Lorenzo Rossi - lorenzo14.rossi@mail.polimi.it}
+\author{Lorenzo Rossi - lgorenzo14.rossi@mail.polimi.it}
 \date{AA 2020/2021}
 
 \begin{document}
@@ -46,7 +46,7 @@
   \vspace{18em}
   \centerline{Quest'opera è distribuita con Licenza Creative Commons Attribuzione}
   \centerline{Non commerciale 4.0 Internazionale \ccbynceu}
-  \centerline{Versione aggiornata al 30/04/2021}
+  \centerline{Versione aggiornata al 03/05/2021}
 \end{doublespacing}
 \newpage
 
@@ -64,11 +64,23 @@ Link repository di GitHub: \url{https://github.com/lorossi/formulario-optoelettr
 L'ultima versione può essere scaricata direttamente cliccando \href{https://github.com/lorossi/formulario-optoelettronica/raw/master/formulario-optoelettronica.pdf}{su questo link.} \newline
 In questo formulario ho cercato prima di tutto di mettere le formule importanti per la risoluzione degli esercizi, preferendole a quelle utili alla comprensione della materia.
 
+\section{Richiami di base}
+\begin{itemize}
+  \item Angolo solido:
+  \item \begin{itemize}
+          \item Assume valori nell'intervallo \( [0, 4 \pi] \)
+          \item Elemento infinitesimo \( d \Omega = 2 \pi \sin(\theta) d \theta \)
+          \item Integrale \( \displaystyle \Omega = \int_0^{2 \pi} = 2 \pi \left[  1- \cos(\theta) \right] \)
+          \item Unità di misura \textit{steradiante}
+        \end{itemize}
+\end{itemize}
+
 \section{Onde elettromagnetiche e pacchetti d'onda}
 \begin{itemize}
 \item Velocità di gruppo \( v = \dfrac{\partial \omega}{\partial k} = \dfrac{c}{N_g} \)
 \item Velocità di fase \( v_f = \dfrac{\omega}{k} = \dfrac{c}{n}  \)
 \item Indice di gruppo \( N_g = n - \lambda_0 \dfrac{\partial n}{\partial \lambda_0} \)
+\item Variazione della lunghezza d'onda \( \Delta \lambda = \dfrac{c}{\nu^2} | \Delta \nu | \)
 \end {itemize}
 
 \subsection{Leggi di Snell}
@@ -232,8 +244,12 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 \begin{itemize}
   \item Guadagno \( g = \dfrac{c^2}{8 \pi \nu^2 c^2 \tau_{sp} \Delta \nu} (N_2 - N_1) \)
   \item Condizione di soglia \( e ^ {2lg} = e^ {2 \alpha_s } \dfrac{1}{R_1 R_2} \)
-  \item Guadagno di soglia \( g_th =\dfrac{c^2}{8 \pi \nu^2 n ^ 2 \tau_{sp} \Delta \nu} (N_2 - N_1)_{th} \)
+  \item Guadagno di soglia \( g_th = \dfrac{1}{2L} \ln\left(\dfrac{1}{R_1 R_2}\right) + \alpha_s \)
+  \item Guadagno del laser (sopra soglia) \( g = \dfrac{c^2}{8 \pi \nu^2 n ^ 2 \tau_{sp} \Delta \nu} (N_2 - N_1) \)
   \item Potenza di uscita \( P_{out} = \dfrac{N_{ph}}{2} \dfrac{c}{n} h \nu (1 - R_1) A \), \( A \) area della superficie del laser
+        \begin{itemize}
+          \item In funzione del flusso fotonico \( P_{out} = \dfrac{1}{2} \Phi_{ph} A h \nu_0 ( 1 - R_2) \)
+        \end{itemize}
   \item Tempo di spegnimento del laser \( \tau_{ph} = \dfrac{n}{c} \alpha_t \)
 \end{itemize}
 
@@ -241,7 +257,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 \begin{itemize}
   \item Periodo apparente \( T ' = T \left( 1 + \dfrac{v_x}{c} \right) \)
   \item Frequenza apparente \( \nu ' \approx \nu \left(1 - \dfrac{v_x}{c} \right) \)
-  \item Allargamento Doppler \( \Delta \nu_{\sfrac{1}{2}} = 2 \nu_0 \sqrt{\dfrac{2 K T \log(2)}{m c ^ 2}} \)
+  \item Allargamento Doppler \( \Delta \nu_{FWHM} = 2 \nu_0 \sqrt{\dfrac{2 K T \log(2)}{m c ^ 2}} \) \textbf{solo per i laser a gas}
 \end{itemize}
 
 \end{document}

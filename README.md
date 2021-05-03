@@ -4,11 +4,12 @@ Un formulario per il corso di Optoelettronica - professore Daniele Ielmini
 
 ## Ultima versione
 
-**AGGIORNATO AL 28/04/2021** - [Download diretto qua](https://github.com/lorossi/formulario-optoelettronica/raw/master/formulario-optoelettronica.pdf)
+**AGGIORNATO AL 03/05/2021** - [Download diretto qua](https://github.com/lorossi/formulario-optoelettronica/raw/master/formulario-optoelettronica.pdf)
 
 ## Contenuti
 
 1. *Riguardo al formulario*
+1. *Richiami di base*
 1. *Onde elettromagnetiche e pacchetti d’onda*
 1. *Riflettore di Bragg*
 1. *Cavità di Fabry-Perot*
