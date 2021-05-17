@@ -46,7 +46,7 @@
   \vspace{18em}
   \centerline{Quest'opera è distribuita con Licenza Creative Commons Attribuzione}
   \centerline{Non commerciale 4.0 Internazionale \ccbynceu}
-  \centerline{Versione aggiornata al 03/05/2021}
+  \centerline{Versione aggiornata al 17/05/2021}
 \end{doublespacing}
 \newpage
 
@@ -63,17 +63,35 @@ Questo formulario verrà espanso (ed, eventualmente, corretto) periodicamente fi
 Link repository di GitHub: \url{https://github.com/lorossi/formulario-optoelettronica} \newline
 L'ultima versione può essere scaricata direttamente cliccando \href{https://github.com/lorossi/formulario-optoelettronica/raw/master/formulario-optoelettronica.pdf}{su questo link.} \newline
 In questo formulario ho cercato prima di tutto di mettere le formule importanti per la risoluzione degli esercizi, preferendole a quelle utili alla comprensione della materia.
+\newpage
 
 \section{Richiami di base}
 \begin{itemize}
   \item Angolo solido:
-  \item \begin{itemize}
+        \begin{itemize}
           \item Assume valori nell'intervallo \( [0, 4 \pi] \)
           \item Elemento infinitesimo \( d \Omega = 2 \pi \sin(\theta) d \theta \)
           \item Integrale \( \displaystyle \Omega = \int_0^{2 \pi} = 2 \pi \left[  1- \cos(\theta) \right] \)
           \item Unità di misura \textit{steradiante}
         \end{itemize}
+  \item Spettro di luce visibile:
+        \begin{table}[h]
+          \centering
+          \renewcommand{\arraystretch}{2}
+          \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{Colore} & \textbf{Lunghezza d'onda \([nm]\)} & \textbf{Frequenza \(Thz\)} \\ \hline
+            Viola           & 380 - 450                          & 670 - 790                  \\ \hline
+            Blu             & 450 - 485                          & 620 - 670                  \\ \hline
+            Ciano           & 485 - 500                          & 600 - 620                  \\ \hline
+            Verde           & 500 - 565                          & 530 - 600                  \\ \hline
+            Giallo          & 565 - 590                          & 510 - 530                  \\ \hline
+            Arancione       & 590 - 625                          & 480 - 510                  \\ \hline
+            Rosso           & 625 - 700                          & 400 - 480                  \\ \hline
+          \end{tabular}
+        \end{table}
 \end{itemize}
+\newpage
 
 \section{Onde elettromagnetiche e pacchetti d'onda}
 \begin{itemize}
@@ -153,6 +171,8 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
         \end{itemize}
 \end{itemize}
 
+\newpage
+
 \section{Riflettore di Bragg}
 \begin{itemize}
   \item Riflettanza di un riflettore a N strati \( R = \left( \dfrac{n_1 ^ {2N} - \sfrac{n_0}{n_3} \; n_2 ^ {2N}}{n_1 ^ {2N} + \sfrac{n_0}{n_3} \; n_2 ^ {2N}} \right) ^ 2 \)
@@ -172,6 +192,8 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item \( \Delta \nu _ {\textnormal{FWHM}} = \dfrac{C}{2 n_s L} \)
   \item Fattore qualità \( Q = \dfrac{\nu_m}{\Delta \nu} = m F \)
 \end{itemize}
+
+\newpage
 
 \section{Guida d'onda}
 \begin{itemize}
@@ -239,6 +261,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item \( n \sin(\theta) = \textnormal{cost} \) in tutta la sezione di fibra
 \end{itemize}
 
+\newpage
 
 \section{Laser}
 \begin{itemize}
@@ -259,5 +282,30 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Frequenza apparente \( \nu ' \approx \nu \left(1 - \dfrac{v_x}{c} \right) \)
   \item Allargamento Doppler \( \Delta \nu_{FWHM} = 2 \nu_0 \sqrt{\dfrac{2 K T \log(2)}{m c ^ 2}} \) \textbf{solo per i laser a gas}
 \end{itemize}
+
+\newpage
+
+\section{Semiconduttori}
+\begin{itemize}
+  \item Legge dell'azione di massa \( n = p = n_i ^ 2 = N_c N_v \exp{\dfrac{E_g}{k T}} \)
+  \item Corrente di deriva \( J = q F (n \mu_n + p \mu_p) \)
+  \item Corrente di diffusione \( J = q D_n \dfrac{\partial n}{\partial x} - q D_p \dfrac{\partial p}{\partial x} \)
+\end{itemize}
+
+\section{LED}
+\begin{itemize}
+  \item Legge di Varshni \( E_G (T) = E_G (0) - \dfrac{A T ^2}{B+T} \)
+  \item Brillanza \( \Phi_V = P_{\textnormal{out}} \cdot 683 \; \sfrac{lm}{W} \cdot V (\lambda) \)
+\end{itemize}
+
+\subsection{Efficienza}
+\begin{itemize}
+  \item Quantica interna \( \eta_{\textnormal{iqe}} = \dfrac{\textnormal{tasso ricombinazione radiativa}}{\textnormal{tasso ricombinazione}} = \dfrac{\sfrac{1}{\tau_r}}{\sfrac{1}{\tau_r} + \sfrac{1}{\tau_{nr}}} = \dfrac{\Phi_{ph}}{\sfrac{I}{q}} = \dfrac{\sfrac{P_{\textnormal{in}}}{h \nu}}{\sfrac{I}{q}}\)
+  \item Quantica esterna \( \eta_{\textnormal{eqe}} = \dfrac{\sfrac{P_{\textnormal{out}}}{h \nu}}{\sfrac{I}{q}}\)
+  \item Di estrazione \( \eta_{\textnormal{ee}} = \sfrac{ \eta_{\textnormal{eqe}}}{\eta_{\textnormal{iqe}}} \leq 1 \)
+  \item Di conversione di potenza \( \eta_{\textnormal{pce}} = \dfrac{P_{\textnormal{out}}}{V I} = \eta_{\textnormal{eqe}} \cdot \dfrac{h \nu}{q V}\)
+  \item Luminosa \( \eta_{\textnormal{le}} = \dfrac{\Phi_v}{V I} \)
+\end{itemize}
+
 
 \end{document}
