@@ -46,7 +46,7 @@
   \vspace{18em}
   \centerline{Quest'opera è distribuita con Licenza Creative Commons Attribuzione}
   \centerline{Non commerciale 4.0 Internazionale \ccbynceu}
-  \centerline{Versione aggiornata al 17/05/2021}
+  \centerline{Versione aggiornata al 11/06/2021}
 \end{doublespacing}
 \newpage
 
@@ -63,7 +63,6 @@ Questo formulario verrà espanso (ed, eventualmente, corretto) periodicamente fi
 Link repository di GitHub: \url{https://github.com/lorossi/formulario-optoelettronica} \newline
 L'ultima versione può essere scaricata direttamente cliccando \href{https://github.com/lorossi/formulario-optoelettronica/raw/master/formulario-optoelettronica.pdf}{su questo link.} \newline
 In questo formulario ho cercato prima di tutto di mettere le formule importanti per la risoluzione degli esercizi, preferendole a quelle utili alla comprensione della materia.
-\newpage
 
 \section{Richiami di base}
 \begin{itemize}
@@ -75,6 +74,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
           \item Unità di misura \textit{steradiante}
         \end{itemize}
   \item Spettro di luce visibile:
+        \vspace{0.5cm}
         \begin{table}[h]
           \centering
           \renewcommand{\arraystretch}{2}
@@ -118,12 +118,6 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 \begin{itemize}
   \item Coefficiente di riflessione \( R = \left( \dfrac{n_2 - n_1}{n_2 + n_1} \right) ^ 2 \)
   \item Coefficiente di trasmissione \( T = \left( \dfrac{2 n_2}{n_2 + n_1} \right) ^ 2 \)
-  \item Strato antiriflesso:
-        \begin{itemize}
-          \item Spessore \( d = \dfrac{\lambda_0}{4 n_2} = \dfrac{\lambda}{4} \)
-          \item Indice di riflessione \( n_2 = \sqrt{n_1 n_3} \)
-          \item Riflettività \( \left( \dfrac{n_0 n_1 - n_2 }{n_0 n_1 + n_ 2} \right) ^ 2 \)
-        \end{itemize}
 \end{itemize}
 
 \subsection{Tunneling ottico}
@@ -133,11 +127,13 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Penetrazione \( \delta = \dfrac{1}{\alpha} \)
 \end{itemize}
 
+\newpage
+
 \subsection{Sfasamento}
 \begin{itemize}
   \item Dovuto alla riflessione interna \( \phi = 0 \)
   \item Dovuto alla riflessione esterna \( \phi = \pi \)
-  \item Dovuto all'attraversamento di un mezzo \( \partial \phi = \partial \dfrac{2 \pi n}{\lambda_0} \)
+  \item Dovuto all'attraversamento di un mezzo \( \Delta \phi = \dfrac{2 \pi n}{\lambda_0} l \)
   \item Della componente riflessa all'interfaccia:
         \begin{itemize}
           \item Coefficiente perpendicolare \( r_\perp = \dfrac{\cos(\theta_i) - \sqrt{\left( \sfrac{n_2}{n_1} \right) ^ 2 - \sin^2(\theta_i)}}{\cos(\theta_i) + \sqrt{\left( \sfrac{n_2}{n_1} \right) ^ 2 - \sin^2(\theta_i)}} \)
@@ -157,8 +153,8 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Campo totale \( \vec{E} = \vec{E}_1 + \vec{E}_2 \)
   \item Modulo quadro \( \displaystyle |\vec{E}| ^ 2 = |\vec{E}_1| ^ 2 + |\vec{E}_2| ^ 2 + 2 \vec{E}_1 \times \vec{E}_2 \)
   \item Intensità \( \displaystyle  I = I_1 + I_2 + 2 \sqrt{I_1 I_2} \cos(\delta) \) con \( \delta = k(r_2 - r_1) + \phi_2 - \phi_1 \) %% controlla
-  \item Interferenza costruttiva \( \delta = 2 m \pi \), \(I = 4 I_1 = 4 I_2 \) in fase
-  \item Interferenza distruttiva \( \delta = 2 (m + 1) \pi \), \(I = 0 \) in quadratura
+  \item Interferenza costruttiva \( \delta = 2 m \pi \), \(I = 4 I_1 = 4 I_2 \) \textit{in fase}
+  \item Interferenza distruttiva \( \delta = 2 (m + 1) \pi \), \(I = 0 \) \textit{in quadratura}
   \item Interferomero di Young:
         \begin{itemize}
           \item Picchi di interferenza costruttiva \( y = \dfrac{L}{S} \lambda m \)
@@ -173,23 +169,32 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 
 \newpage
 
-\section{Riflettore di Bragg}
+\subsection{Riflettore di Bragg}
 \begin{itemize}
+  \item Spessore \( d = \dfrac{\lambda_0}{n \cdot 2} = \dfrac{\lambda}{4} \)
   \item Riflettanza di un riflettore a N strati \( R = \left( \dfrac{n_1 ^ {2N} - \sfrac{n_0}{n_3} \; n_2 ^ {2N}}{n_1 ^ {2N} + \sfrac{n_0}{n_3} \; n_2 ^ {2N}} \right) ^ 2 \)
-  \item FWHM \( \dfrac{\Delta \lambda}{\lambda_0} = \dfrac{4}{\pi} \arcsin \left( \dfrac{n_1 - n_2}{n_1 + n_2} \right) \)
+  \item Larghezza a metà altezza dello spettro delle lunghezze d'onda \( \Delta \lambda_{\sfrac{1}{2}} = \dfrac{\Delta \lambda}{\lambda_0} = \dfrac{4}{\pi} \arcsin \left( \dfrac{n_1 - n_2}{n_1 + n_2} \right) \)
 \end{itemize}
+
+\subsection{Strato antiriflesso}
+\begin{itemize}
+  \item Spessore \( d = \dfrac{\lambda_0}{n \cdot 4} = \dfrac{\lambda}{4} \)
+  \item Indice di rifrazione \( n_2 = \sqrt{n_1 n_3} \)
+  \item Riflettività \( \left( \dfrac{n_0 n_1 - n_2 }{n_0 n_1 + n_ 2} \right) ^ 2 \)
+\end{itemize}
+
+\newpage
 
 \section {Cavità di Fabry-Perot}
 \begin{itemize}
-  \item Frequenze ammesse \(  \nu = m \dfrac{c}{2L} \), \( m \) numero intero positivo
-  \item Free spectral range \( \Delta \nu = \nu_{m} - \nu_{m-1} = \dfrac{c}{2L} \)
+  \item Frequenze ammesse \(  \nu = m \dfrac{c}{2L} \), \( m \) \textit{numero intero positivo, indice del modo}
+  \item Free spectral range \( \Delta \nu_{\textnormal{FSR}} = \nu_{m} - \nu_{m-1} = \dfrac{c}{2L} \)
   \item Campo elettrico totale \( \vec{E} = \dfrac{A_0}{1-R \cdot e^ {j 2 k l}} \)
   \item Intensità totale \( I = | E | ^ 2 = \dfrac{A_0^2}{(1-R)^2+ 4 R \sin(kL)^2} \)
   \item Massima ampiezza \( I_{max} = \dfrac{I_0}{(1-R)^2} \)
-  \item Full width half maximum (FWHM) dell'intensità \( \sin(k L) = \dfrac{1 - R}{2 \sqrt{R}} \)
   \item Finezza spettrale \( F = \dfrac{\pi \sqrt{R}}{1-R} \)
-  \item Full width half maximum (FWHM) della frequenza \( \Delta \nu  = \dfrac{\dfrac{C}{2L}}{\dfrac{\pi \sqrt{R}}{1 - r}} \)
-  \item \( \Delta \nu _ {\textnormal{FWHM}} = \dfrac{C}{2 n_s L} \)
+  \item Larghezza a metà altezza dello spettro della frequenza \(\Delta \nu_{\sfrac{1}{2}} = \dfrac{\dfrac{C}{2L}}{\dfrac{\pi \sqrt{R}}{1 - r}} \)
+  \item Larghezza a metà altezza dello spettro dell'intensità \(\Delta I_{\sfrac{1}{2}} = \sin(k L) = \dfrac{1 - R}{2 \sqrt{R}} \)
   \item Fattore qualità \( Q = \dfrac{\nu_m}{\Delta \nu} = m F \)
 \end{itemize}
 
@@ -214,21 +219,9 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
         \end{itemize}
   \item Dispersione
         \begin{itemize}
-          \item Intermodale
-                \begin{itemize}
-                  \item Stima della dispersione intermodale \( \Delta \tau = \dfrac{L n_1}{c} - \dfrac{L n_2}{c} \)
-                  \item Dispersione per unità di lunghezza \(  \dfrac{\Delta \tau}{L} = \dfrac{n_1 - n_2}{c} \)
-                \end{itemize}
-          \item Intramodale
-                \begin{itemize}
-                  \item In presenza di un solo modo (\( \omega < \omega_{cutoff} \)) il pacchetto di distribuisce su un range di frequenze angolari
-                  \item \( \Delta \omega = \dfrac{2 \pi}{\Delta \tau} \)
-                \end{itemize}
-          \item Di materiale
-                \begin{itemize}
-                  \item Prescinde dalla propagazione in guida e discende dalla dipendenza di \(n\) dalla lunghezza d'onda
-                  \item \( D_m = \dfrac{\Delta t}{L \Delta \lambda} = \left| -\dfrac{\lambda}{c} \dfrac{\partial ^ 2}{\partial \lambda ^ 2} \right| \)
-                \end{itemize}
+          \item Intermodale \( \dfrac{\Delta \tau}{L} \approx \dfrac{n_1 - n_2}{c} \)
+          \item Di materiale \( \dfrac{\Delta \tau}{L} \approx D_m \Delta \lambda \), con \( D_m = \left| -\dfrac{\lambda}{c} \dfrac{\partial ^ 2}{\partial \lambda ^ 2} \right| \)
+          \item Intramodale \( \Delta \omega = \dfrac{2 \pi}{\Delta \tau} \)
         \end{itemize}
 \end{itemize}
 
@@ -239,13 +232,11 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 \begin{itemize}
   \item Differenza di indice relativa \(  \Delta = \dfrac{n_1 - n_2}{n_1} \)
   \item Numero di modi \(  M \approx \dfrac{V^2}{2} \)
-  \item Attenuazione in fibra \(  \alpha = - \dfrac{1}{P} \dfrac{dP}{dx} \rightarrow P = P_0 e^{-\alpha L}\), \(   E = E_0 e^{-\alpha L / 2} \)
   \item Dispersione
         \begin{itemize}
           \item Intermodale \(  \dfrac{\Delta \tau}{L} \approx \dfrac{n_1 - n_2}{c} = \dfrac{n_1 \Delta}{c} \)
-          \item Di materiale \(  \dfrac{\Delta \tau}{L} = | D_m | \Delta \lambda \) con \( D_m = -\dfrac{\lambda}{c} \dfrac{d^2 n}{d \lambda^2} \)
-          \item Di guida/cromatica \(  \dfrac{\Delta \tau}{L} = | D_w | \Delta \lambda \)
-          \item Sommando \( D_m \) e \( D_w \) si ottiene la dispersione cromatica \( \dfrac{\Delta \tau}{L} = | D_m + D_w | \Delta \lambda = | D_{Cr} | \Delta \lambda \)
+          \item Di materiale \(  \dfrac{\Delta \tau}{L} \approx D_m  \Delta \lambda \), con \( D_m = \left| -\dfrac{\lambda}{c} \dfrac{\partial ^ 2}{\partial \lambda ^ 2} \right| \)
+          \item Cromatica \( \dfrac{\Delta \tau}{L} = | D_m + D_w | \Delta \lambda = | D_{Cr} | \Delta \lambda \)
         \end{itemize}
   \item Apertura numerica (NA)
         \begin{itemize}
@@ -266,21 +257,31 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 \section{Laser}
 \begin{itemize}
   \item Guadagno \( g = \dfrac{c^2}{8 \pi \nu^2 c^2 \tau_{sp} \Delta \nu} (N_2 - N_1) \)
-  \item Condizione di soglia \( e ^ {2lg} = e^ {2 \alpha_s } \dfrac{1}{R_1 R_2} \)
-  \item Guadagno di soglia \( g_th = \dfrac{1}{2L} \ln\left(\dfrac{1}{R_1 R_2}\right) + \alpha_s \)
+  \item Condizione di soglia \( g_{th} = \alpha_t = \alpha_s + \dfrac{1}{2L} \ln\left(\dfrac{1}{R_1 R_2}\right) \), \( \alpha_s \) perdite interne
+  \item Guadagno di soglia \( g_th = \dfrac{1}{2L} \ln\left(\dfrac{1}{R_1 R_2}\right)\)
   \item Guadagno del laser (sopra soglia) \( g = \dfrac{c^2}{8 \pi \nu^2 n ^ 2 \tau_{sp} \Delta \nu} (N_2 - N_1) \)
   \item Potenza di uscita \( P_{out} = \dfrac{N_{ph}}{2} \dfrac{c}{n} h \nu (1 - R_1) A \), \( A \) area della superficie del laser
         \begin{itemize}
           \item In funzione del flusso fotonico \( P_{out} = \dfrac{1}{2} \Phi_{ph} A h \nu_0 ( 1 - R_2) \)
         \end{itemize}
-  \item Tempo di spegnimento del laser \( \tau_{ph} = \dfrac{n}{c} \alpha_t \)
+  \item Tempo di spegnimento del laser \( \tau_{ph} = \dfrac{n}{c \cdot \alpha_t} \)
 \end{itemize}
 
-\subsection{Effetto Doppler}
+\subsection{Laser a gas}
+\subsubsection{Effetto Doppler}
 \begin{itemize}
   \item Periodo apparente \( T ' = T \left( 1 + \dfrac{v_x}{c} \right) \)
   \item Frequenza apparente \( \nu ' \approx \nu \left(1 - \dfrac{v_x}{c} \right) \)
-  \item Allargamento Doppler \( \Delta \nu_{FWHM} = 2 \nu_0 \sqrt{\dfrac{2 K T \log(2)}{m c ^ 2}} \) \textbf{solo per i laser a gas}
+  \item Allargamento Doppler \( \Delta \nu_{\textnormal{FWHM}} = 2 \nu_0 \sqrt{\dfrac{2 K T \log(2)}{m c ^ 2}} \)
+  \item Numero di modi in cavità \(m = \dfrac{ \nu_{\textnormal{FWHM}}}{ \nu_{\textnormal{FSR}}} \)
+\end{itemize}
+
+\subsection{Laser a stato solido}
+\begin{itemize}
+  \item Equazione del diodo \( \dfrac{I}{q w l d} = \dfrac{n}{\tau_r} + C \cdot n \cdot N_{\textnormal{ph}}\)
+  \item Numero di fotoni \( N_{\textnormal{ph}} = \dfrac{\tau_{\textnormal{ph}}}{q w l d} ( I - I_{th}) \)
+  \item Slope efficiency \( \textnormal{SE} = \dfrac{h c^2 \tau_{\textnormal{ph}}}{2 n  \lambda q L} \)
+  \item Potenza in uscita \( P_0 = \textnormal{SE} \cdot (I - I_{\textnormal{th}} ) \)
 \end{itemize}
 
 \newpage
@@ -294,8 +295,15 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 
 \section{LED}
 \begin{itemize}
+  \item Energia massima dei fotoni \( E_{\textnormal{MAX}} = E_G + \dfrac{KT}{2} \)
   \item Legge di Varshni \( E_G (T) = E_G (0) - \dfrac{A T ^2}{B+T} \)
-  \item Brillanza \( \Phi_V = P_{\textnormal{out}} \cdot 683 \; \sfrac{lm}{W} \cdot V (\lambda) \)
+  \item Brillanza \( \Phi_V = P_{\textnormal{out}} \cdot 683 \; \dfrac{lm}{W} \cdot V (\lambda) \)
+\end{itemize}
+
+\subsection{Emettitore lambertiano}
+\begin{itemize}
+  \item Intensità \( I (\theta) = I_0 \cos(\theta) \)
+  \item Potenza emessa \( \displaystyle P_0 = \int\limits_{0}^{2 \pi} I_0 \cos(\theta) d\Omega = \int\limits_{0}^{\sfrac{\pi}{2}} 2 \pi \sin(\theta) d\theta \)
 \end{itemize}
 
 \subsection{Efficienza}
@@ -305,6 +313,37 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Di estrazione \( \eta_{\textnormal{ee}} = \sfrac{ \eta_{\textnormal{eqe}}}{\eta_{\textnormal{iqe}}} \leq 1 \)
   \item Di conversione di potenza \( \eta_{\textnormal{pce}} = \dfrac{P_{\textnormal{out}}}{V I} = \eta_{\textnormal{eqe}} \cdot \dfrac{h \nu}{q V}\)
   \item Luminosa \( \eta_{\textnormal{le}} = \dfrac{\Phi_v}{V I} \)
+  \item Larghezza spettro di emissione \( \Delta \nu_{\sfrac{1}{2}} = \dfrac{m k T}{h} \), \(m \approx 3 \)
+  \item Larghezza spettro di emissione \( \Delta \lambda_{\sfrac{1}{2}} = \dfrac{m k T \lambda_0^2}{h c} \), \(m \approx 3 \)
+\end{itemize}
+
+\newpage
+
+\section{Fotodiodi}
+\begin{itemize}
+  \item Efficienza quantica \( \eta = \dfrac{\sfrac{I_{\textnormal{ph}}}{q}}{\sfrac{P_0}{h \nu}} \)
+  \item Responsività \( R = \dfrac{I_{\textnormal{ph}}}{P_0} = \eta \dfrac{q}{h \nu} = \eta \dfrac{q \lambda}{h c} \)
+  \item Capacità di svuotamento \( C = \epsilon_{Si} \dfrac{A}{w d} \)
+  \item Tensione di built-in \( \Phi_{\textnormal{bi}} = \dfrac{KT}{q} \ln\left( \dfrac{N_A N_D}{n_i^ 2}\right) \)
+  \item Lunghezza zona di svuotamento \( w = \sqrt{ \dfrac{2 \epsilon_{Si}}{q} (V_R +  \Phi_{\textnormal{bi}}) \left( \dfrac{1}{N_A} + \dfrac{1}{N_d} \right) } \)
+\end{itemize}
+
+\subsection{Fotodiodo a valanga - APD}
+\begin{itemize}
+  \item Coefficienti di assorbimento:
+        \begin{itemize}
+          \item degli elettroni \( \alpha_e = A_e \cdot \exp\left(\dfrac{B_e}{F}\right) \)
+          \item delle lacune \( \alpha_h = A_h \cdot \exp\left(\dfrac{B_h}{F}\right) \)
+          \item rapporto \( k = \dfrac{\alpha_e}{\alpha_h} \)
+          \item Fattore di guadagno \( M = \dfrac{1 - k}{e^{-(1-k) \alpha_e w} - k } \)
+        \end{itemize}
+  \item Fattore di guadagno \( M = \dfrac{I_{\textnormal{ph}}}{I_{\textnormal{ph}_0}} \approx \left[ 1-\left( \dfrac{V}{V_\textnormal{BD}} \right) ^ m \right] ^ {9} \)
+\end{itemize}
+
+\subsection{Diodo fotovoltaico}
+\begin{itemize}
+  \item Corrente \( I = - I_{\textnormal{ph}} + I_D \left[\exp\left(\dfrac{qV}{kT}\right) - 1 \right] \)
+  \item Fill factor \( \textnormal{FF} = \dfrac{V_m \: I_m}{V_{oc} \: I_{cc}} \)
 \end{itemize}
 
 
