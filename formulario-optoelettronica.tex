@@ -46,7 +46,7 @@
   \vspace{18em}
   \centerline{Quest'opera è distribuita con Licenza Creative Commons Attribuzione}
   \centerline{Non commerciale 4.0 Internazionale \ccbynceu}
-  \centerline{Versione aggiornata al 11/06/2021}
+  \centerline{Versione aggiornata al 26/06/2021}
 \end{doublespacing}
 \newpage
 
@@ -71,7 +71,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
           \item Assume valori nell'intervallo \( [0, 4 \pi] \)
           \item Elemento infinitesimo \( d \Omega = 2 \pi \sin(\theta) d \theta \)
           \item Integrale \( \displaystyle \Omega = \int_0^{2 \pi} = 2 \pi \left[  1- \cos(\theta) \right] \)
-          \item Unità di misura \textit{steradiante}
+          \item Unità di misura \textit{steradiante, (sr)}
         \end{itemize}
   \item Spettro di luce visibile:
         \vspace{0.5cm}
@@ -95,9 +95,9 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 
 \section{Onde elettromagnetiche e pacchetti d'onda}
 \begin{itemize}
-\item Velocità di gruppo \( v = \dfrac{\partial \omega}{\partial k} = \dfrac{c}{N_g} \)
+\item Velocità di gruppo \( v = \dfrac{\partial \, \omega}{\partial k} = \dfrac{c}{N_g} \)
 \item Velocità di fase \( v_f = \dfrac{\omega}{k} = \dfrac{c}{n}  \)
-\item Indice di gruppo \( N_g = n - \lambda_0 \dfrac{\partial n}{\partial \lambda_0} \)
+\item Indice di gruppo \( N_g = n - \lambda_0 \dfrac{\partial \, n}{\partial \lambda_0} \)
 \item Variazione della lunghezza d'onda \( \Delta \lambda = \dfrac{c}{\nu^2} | \Delta \nu | \)
 \end {itemize}
 
@@ -111,7 +111,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
         \end{itemize}
   \item Prima legge \( \theta_i = \theta_r \)
   \item Seconda legge \( n_1 \sin(\theta_i) = n_2 \sin(\theta_t) \)
-  \item Total internal reflection \( \theta_c = \arcsin\dfrac{n_2}{n_1} \)
+  \item Total internal reflection \( \theta_c = \arcsin \left( \dfrac{n_2}{n_1} \right) \)
 \end{itemize}
 
 \subsection{Riflessione e trasmissione}
@@ -120,9 +120,9 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Coefficiente di trasmissione \( T = \left( \dfrac{2 n_2}{n_2 + n_1} \right) ^ 2 \)
 \end{itemize}
 
-\subsection{Tunneling ottico}
+\subsection{Tunnelling ottico}
 \begin{itemize}
-  \item Campo evanescente \( \vec{E} \propto \exp{\{-\alpha_2 z\}} \exp{\{ i \omega t \}} \)
+  \item Campo evanescente \( \vec{E} \propto e^{-\alpha_2 z} e ^ { i \omega t } \)
   \item Coefficiente di attenuazione \( \alpha = \dfrac{2 \pi n}{\lambda} \sqrt{ \left( \dfrac{n_1}{n_2} \right) ^ 2 \sin(\theta_i) - 1} \)
   \item Penetrazione \( \delta = \dfrac{1}{\alpha} \)
 \end{itemize}
@@ -145,7 +145,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 \subsection{Coerenza}
 \begin{itemize}
   \item Spaziale \( l_c = c \cdot \Delta \nu \)
-  \item Temporale \( t_c = \frac{1}{\Delta \nu} \)
+  \item Temporale \( t_c = \sfrac{1}{\Delta \nu} \)
 \end{itemize}
 
 \subsection{Interferenza}
@@ -155,7 +155,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Intensità \( \displaystyle  I = I_1 + I_2 + 2 \sqrt{I_1 I_2} \cos(\delta) \) con \( \delta = k(r_2 - r_1) + \phi_2 - \phi_1 \) %% controlla
   \item Interferenza costruttiva \( \delta = 2 m \pi \), \(I = 4 I_1 = 4 I_2 \) \textit{in fase}
   \item Interferenza distruttiva \( \delta = 2 (m + 1) \pi \), \(I = 0 \) \textit{in quadratura}
-  \item Interferomero di Young:
+  \item Interferometro di Young:
         \begin{itemize}
           \item Picchi di interferenza costruttiva \( y = \dfrac{L}{S} \lambda m \)
           \item Intensità dei picchi \( I = I_0  \left[ 1 + cos\left( k \dfrac{S}{L} y \right) \right] \)
@@ -171,9 +171,9 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 
 \subsection{Riflettore di Bragg}
 \begin{itemize}
-  \item Spessore \( d = \dfrac{\lambda_0}{n \cdot 2} = \dfrac{\lambda}{4} \)
+  \item Spessore \( d = \dfrac{\lambda_0}{n \cdot 2} = \dfrac{\lambda}{2} \)
   \item Riflettanza di un riflettore a N strati \( R = \left( \dfrac{n_1 ^ {2N} - \sfrac{n_0}{n_3} \; n_2 ^ {2N}}{n_1 ^ {2N} + \sfrac{n_0}{n_3} \; n_2 ^ {2N}} \right) ^ 2 \)
-  \item Larghezza a metà altezza dello spettro delle lunghezze d'onda \( \Delta \lambda_{\sfrac{1}{2}} = \dfrac{\Delta \lambda}{\lambda_0} = \dfrac{4}{\pi} \arcsin \left( \dfrac{n_1 - n_2}{n_1 + n_2} \right) \)
+  \item Larghezza a metà altezza dello spettro \( \Delta \lambda_{\sfrac{1}{2}} = \dfrac{\Delta \lambda}{\lambda_0} = \dfrac{4}{\pi} \arcsin \left( \dfrac{n_1 - n_2}{n_1 + n_2} \right) \)
 \end{itemize}
 
 \subsection{Strato antiriflesso}
@@ -188,6 +188,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 \section {Cavità di Fabry-Perot}
 \begin{itemize}
   \item Frequenze ammesse \(  \nu = m \dfrac{c}{2L} \), \( m \) \textit{numero intero positivo, indice del modo}
+  \item Lunghezza della cavità \( L = m \dfrac{\lambda}{2} \)
   \item Free spectral range \( \Delta \nu_{\textnormal{FSR}} = \nu_{m} - \nu_{m-1} = \dfrac{c}{2L} \)
   \item Campo elettrico totale \( \vec{E} = \dfrac{A_0}{1-R \cdot e^ {j 2 k l}} \)
   \item Intensità totale \( I = | E | ^ 2 = \dfrac{A_0^2}{(1-R)^2+ 4 R \sin(kL)^2} \)
@@ -214,13 +215,13 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
           \item V-number \(\displaystyle V = \dfrac{2 \pi a n_1}{\lambda} \sqrt{1 - \left(\dfrac{n_2}{n_1}\right) ^ 2} \)
           \item Numero di modi \( m < \dfrac{2V - \Phi_m}{\pi} \)
           \item Numero totale di modi \( int\left(\dfrac{2V}{\pi} \right) + 1 \)
-          \item Propagazione monomodale \( V < \dfrac{\pi}{2} \)
+          \item Propagazione   \( V < \dfrac{\pi}{2} \)
           \item Lunghezza di cut-off \( \displaystyle \lambda_c = 4a \sqrt{n_1^2 - n_2^2} \)
         \end{itemize}
   \item Dispersione
         \begin{itemize}
           \item Intermodale \( \dfrac{\Delta \tau}{L} \approx \dfrac{n_1 - n_2}{c} \)
-          \item Di materiale \( \dfrac{\Delta \tau}{L} \approx D_m \Delta \lambda \), con \( D_m = \left| -\dfrac{\lambda}{c} \dfrac{\partial ^ 2}{\partial \lambda ^ 2} \right| \)
+          \item Di materiale \( \dfrac{\Delta \tau}{L} \approx D_m \Delta \lambda \), con \( D_m = \left| -\dfrac{\lambda}{c} \dfrac{\partial ^ 2 \, n}{\partial \lambda ^ 2} \right| \)
           \item Intramodale \( \Delta \omega = \dfrac{2 \pi}{\Delta \tau} \)
         \end{itemize}
 \end{itemize}
@@ -228,6 +229,10 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 \newpage
 
 \section{Fibra ottica}
+
+\begin{itemize}
+  \item Perdita per accoppiamento led-fibra \( \alpha_{\textnormal{LF}} = \textnormal{NA} ^ 2 \)
+\end{itemize}
 \subsection{Fibra step index}
 \begin{itemize}
   \item Differenza di indice relativa \(  \Delta = \dfrac{n_1 - n_2}{n_1} \)
@@ -235,7 +240,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Dispersione
         \begin{itemize}
           \item Intermodale \(  \dfrac{\Delta \tau}{L} \approx \dfrac{n_1 - n_2}{c} = \dfrac{n_1 \Delta}{c} \)
-          \item Di materiale \(  \dfrac{\Delta \tau}{L} \approx D_m  \Delta \lambda \), con \( D_m = \left| -\dfrac{\lambda}{c} \dfrac{\partial ^ 2}{\partial \lambda ^ 2} \right| \)
+          \item Di materiale \(  \dfrac{\Delta \tau}{L} \approx | D_m | \Delta \lambda \), con \( D_m =  -\dfrac{\lambda}{c} \dfrac{\partial ^ 2 n}{\partial \lambda ^ 2} \)
           \item Cromatica \( \dfrac{\Delta \tau}{L} = | D_m + D_w | \Delta \lambda = | D_{Cr} | \Delta \lambda \)
         \end{itemize}
   \item Apertura numerica (NA)
@@ -243,7 +248,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
           \item NA \( \displaystyle = \sqrt{n_1^2 - n_2^2} \)
           \item Angolo di accettazione massimo \( \alpha = \arcsin \left( \dfrac{\textnormal{NA}}{n_0} \right) \)
           \item V-Number \( V = \dfrac{2 \pi a}{\lambda} \textnormal{NA} \)
-          \item Per \( V < 2.405 \) ho fibra monomodale.
+          \item Per \( V < 2.405 \) si ha fibra monomodale
         \end{itemize}
 \end{itemize}
 
@@ -290,7 +295,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 \begin{itemize}
   \item Legge dell'azione di massa \( n = p = n_i ^ 2 = N_c N_v \exp{\dfrac{E_g}{k T}} \)
   \item Corrente di deriva \( J = q F (n \mu_n + p \mu_p) \)
-  \item Corrente di diffusione \( J = q D_n \dfrac{\partial n}{\partial x} - q D_p \dfrac{\partial p}{\partial x} \)
+  \item Corrente di diffusione \( J = q D_n \dfrac{\partial \, n}{\partial x} - q D_p \dfrac{\partial p}{\partial x} \)
 \end{itemize}
 
 \section{LED}
@@ -325,7 +330,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Responsività \( R = \dfrac{I_{\textnormal{ph}}}{P_0} = \eta \dfrac{q}{h \nu} = \eta \dfrac{q \lambda}{h c} \)
   \item Capacità di svuotamento \( C = \epsilon_{Si} \dfrac{A}{w d} \)
   \item Tensione di built-in \( \Phi_{\textnormal{bi}} = \dfrac{KT}{q} \ln\left( \dfrac{N_A N_D}{n_i^ 2}\right) \)
-  \item Lunghezza zona di svuotamento \( w = \sqrt{ \dfrac{2 \epsilon_{Si}}{q} (V_R +  \Phi_{\textnormal{bi}}) \left( \dfrac{1}{N_A} + \dfrac{1}{N_d} \right) } \)
+  \item Lunghezza zona di svuotamento \( w = \sqrt{ \dfrac{2 \, \epsilon_{\textnormal{si}}}{q} (V_R +  \Phi_{\textnormal{bi}}) \left( \dfrac{1}{N_A} + \dfrac{1}{N_D} \right) } \)
 \end{itemize}
 
 \subsection{Fotodiodo a valanga - APD}
@@ -337,7 +342,6 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
           \item rapporto \( k = \dfrac{\alpha_e}{\alpha_h} \)
           \item Fattore di guadagno \( M = \dfrac{1 - k}{e^{-(1-k) \alpha_e w} - k } \)
         \end{itemize}
-  \item Fattore di guadagno \( M = \dfrac{I_{\textnormal{ph}}}{I_{\textnormal{ph}_0}} \approx \left[ 1-\left( \dfrac{V}{V_\textnormal{BD}} \right) ^ m \right] ^ {9} \)
 \end{itemize}
 
 \subsection{Diodo fotovoltaico}
@@ -346,5 +350,148 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Fill factor \( \textnormal{FF} = \dfrac{V_m \: I_m}{V_{oc} \: I_{cc}} \)
 \end{itemize}
 
+\newpage
+
+\section{Domande di teoria dei temi di esame}
+
+\subsection{01/02/2021}
+\begin{enumerate}
+  \item Si illustri il bilancio tra assorbimento, emissione spontanea ed emissione stimolata. Sulla base di questo bilancio,
+        si ricavino le condizioni di funzionamento di un laser.
+  \item Si ricavi il teorema di Shockley-Ramo nei fotodiodi.
+\end{enumerate}
+
+\subsection{19/02/2021}
+\begin{enumerate}
+  \item Si discutano gli effetti di dispersione in una fibra ottica, distinguendo i vari contributi alla dispersione.
+  \item Si illustrino i meccanismi di generazione e ricombinazione nei semiconduttori, discutendo le rispettive applicazioni in optoelettronica e i requisiti in termini di band gap.
+\end{enumerate}
+
+\subsection{04/09/2020}
+\begin{enumerate}
+  \item Illustrare il principio di funzionamento di un laser ad eterogiunzione.
+  \item Illustrare le caratteristiche I/V di un fotodiodo in assenza e presenza di illuminazione (hv > EG). Nel secondo caso descrivere il comportamento del fotodiodo per tensione negativa, tensione nulla e corrente nulla.
+\end{enumerate}
+
+\subsection{20/07/2020}
+\begin{enumerate}
+  \item Si definisca il V-number per una guida d’onda e per una fibra ottica, illustrando come da esso si possa risalire al numero di modi di propagazione.
+  \item Si illustri il principio di funzionamento di un laser per il caso a 3 livelli e quello a 4 livelli, fornendo esempi pratici per entrambi.
+\end{enumerate}
+
+\subsection{22/06/2020}
+\begin{enumerate}
+  \item Illustrare i materiali semiconduttori impiegati nei LED, in particolare le considerazioni che portano alla scelta del materiale in relazione all’efficienza e al colore.
+  \item Illustrare il principio di funzionamento di un fotodiodo e la metrica usata per valutare la sua efficienza.
+\end{enumerate}
+
+\subsection{13/02/2020}
+\begin{enumerate}
+  \item Descrivere la struttura ed il principio di funzionamento del laser He-Ne, illustrando le principali caratteristiche della radiazione emessa.
+  \item Illustrare il principio di funzionamento di un fotodiodo pn mediante la dimostrazione del teorema di Ramo. \textit{Nota: teorema Shockley-Ramo.}
+\end{enumerate}
+
+\subsection{31/01/2020}
+\begin{enumerate}
+  \item Discutere il problema dell’attenuazione nelle fibre ottiche, mostrando come esso limiti la massima lunghezza di
+        una fibra in un sistema di comunicazione.
+  \item Illustrare i fenomeni di allargamento della riga di guadagno in una sorgente laser.
+\end{enumerate}
+
+\subsection{29/07/2020}
+\begin{enumerate}
+  \item Discutere il principio di funzionamento dei laser a 3 livelli e 4 livelli.
+  \item Descrivere la struttura ed il principio di funzionamento di un fotodiodo a valanga, mettendo in luce i vantaggi
+        rispetto ad un fotodiodo pin.
+\end{enumerate}
+
+\subsection{20/02/2019}
+\begin{enumerate}
+  \item Si illustrino la struttura e il funzionamento dei LED bianchi.
+  \item Illustrare il principio di funzionamento di un fotodiodo pn mediante la dimostrazione del teorema di Ramo. \textit{Nota: teorema Shockley-Ramo.}
+\end{enumerate}
+
+\subsection{12/09/2019}
+\begin{enumerate}
+  \item Descrivere il principio di funzionamento di una guida d’onda planare, illustrando la condizione di propagazione
+        guidata e discutendo il numero di modi di propagazione.
+  \item Definire l’efficienza luminosa di un LED, discutendo la differenza rispetto ad una sorgente ad incandescenza.
+\end{enumerate}
+
+\subsection{28/06/2019}
+\begin{enumerate}
+  \item Illustrare il fenomeno della dispersione in una fibra ottica, mostrandone l’impatto sul bit rate di un sistema di
+        comunicazione.
+  \item Illustrare il principio di funzionamento di un diodo laser ad omogiunzione, mettendo in luce i principali svantaggi
+        rispetto a strutture a doppia eterogiunzione.
+\end{enumerate}
+
+\subsection{04/02/2019}
+\begin{enumerate}
+  \item Illustrare i meccanismi di allargamento della riga di guadagno ottico nelle sorgenti laser, riferendosi in particolare
+        ai laser He-Ne e Nd3+:YAG.
+  \item Illustrare i meccanismi di generazione di luce nei semiconduttori a gap diretto e indiretto, mostrando quale delle
+        due categorie si presta meglio come sorgente luminosa.
+\end{enumerate}
+
+\subsection{23/07/2019}
+\begin{enumerate}
+  \item Illustrare il principio di funzionamento di una sorgente laser, descrivendo le principali caratteristiche della
+        radiazione emessa.
+  \item Discutere la scelta dei materiali nelle sorgenti LED, in particolare per quanto riguarda il colore della luce emessa.
+\end{enumerate}
+
+\subsection{05/09/2018}
+\begin{enumerate}
+  \item Discutere il problema dell’attenuazione in una fibra ottica, descrivendone l’impatto sulla scelta della lunghezza
+        d’onda di lavoro in un sistema di comunicazione in fibra.
+  \item Illustrare il meccanismo fisico di ionizzazione per impatto, mostrando come possa essere sfruttato nella
+        rivelazione di fotoni.
+\end{enumerate}
+
+\subsection{29/06/2018}
+\begin{enumerate}
+  \item Discutere il trade-off tra dispersione ed accoppiamento di potenza in una fibra ottica step-index.
+  \item Descrivere la struttura e il principio di funzionamento di un diodo laser VCSEL, mettendo in luce i vantaggi
+        rispetto ad una struttura ad emissione laterale.
+\end{enumerate}
+
+\subsection{12/02/2018}
+\begin{enumerate}
+  \item Illustrare i vantaggi di una struttura a quantum well nella generazione di luce coerente e non coerente.
+  \item Illustrare il principio di funzionamento di una cella fotovoltaica e discutere l’effetto delle resistenze parassite sulla
+        curva caratteristica I-V.
+\end{enumerate}
+
+\subsection{27/06/2017}
+\begin{enumerate}
+  \item Illustrare i fattori che limitano l’efficienza di conversione nelle celle solari.
+  \item Illustrare i meccanismi di generazione di luce nei semiconduttori a gap diretto e indiretto, mostrando quale delle
+        due categorie si presta meglio come sorgente luminosa.
+\end{enumerate}
+
+\subsection{20/07/2017}
+\begin{enumerate}
+  \item Illustrare i fattori che limitano la massima lunghezza di una fibra ottica in un sistema di comunicazione,
+        evidenziando l’origine fisica dei vari contributi e le possibili soluzioni.
+  \item Descrivere le caratteristiche che distinguono un diodo LED da un diodo LASER in termini di principio di
+        funzionamento, materiali e struttura del dispositivo.
+\end{enumerate}
+
+\subsection{}
+\begin{enumerate}
+  \item Descrivere il funzionamento del laser He-Ne: livelli energetici, pompaggio, meccanismo di emissione laser, e
+        spettro d’uscita.
+  \item Illustrare il principio di funzionamento di un fotorivelatore a giunzione pn, evidenziando i principali limiti e
+        spiegando come essi vengono risolti dal fotodiodo pin.
+\end{enumerate}
+
+\iffalse
+  \subsection{}
+  \begin{enumerate}
+    \item
+    \item
+  \end{enumerate}
+\fi
 
 \end{document}
