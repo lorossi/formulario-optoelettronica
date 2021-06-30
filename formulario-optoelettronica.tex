@@ -1,4 +1,5 @@
-\documentclass{article}
+\documentclass[9pt]{extarticle}
+
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{geometry}
@@ -11,10 +12,11 @@
 \usepackage{cellspace}
 \usepackage{setspace}
 \usepackage{lmodern}
+
 \setlength\cellspacetoplimit{4pt}
 \setlength\cellspacebottomlimit{4pt}
 
-\geometry{left = 2 cm, right = 2 cm, bottom = 2 cm, top = 2 cm}
+\geometry{left = 2 cm, right = 2 cm, bottom = 1.5 cm, top = 1.5 cm}
 \setlength{\parindent}{0em}
 \hypersetup{
 	colorlinks=true,
@@ -27,27 +29,28 @@
 \pagestyle{plain}
 \pagenumbering{gobble}
 
-\title{Formulario di Optoelettronica}
-\author{Lorenzo Rossi - lorenzo14.rossi@mail.polimi.it}
-\date{AA 2020/2021}
+\title{\Huge{Formulario di Optoelettronica}}
+\author{\Huge{Lorenzo Rossi - lorenzo14.rossi@mail.polimi.it}}
+\date{\Huge{AA 2020/2021}}
 
 \begin{document}
 \maketitle
 
-\vspace{18em}
+\vspace{25em}
 
-\large
 \begin{doublespacing}\hypersetup{
     urlcolor=black,
   }\urlstyle{same}
-  \centerline{Email: \href{mailto://lorenzo14.rossi@mail.polimi.it}{lorenzo14.rossi@mail.polimi.it}}
-  \centerline{GitHub: \url{https://github.com/lorossi}}
+  \centerline{\Large{Email: \href{mailto://lorenzo14.rossi@mail.polimi.it}{lorenzo14.rossi@mail.polimi.it}}}
+  \centerline{\Large{GitHub: \url{https://github.com/lorossi}}}
 
-  \vspace{18em}
-  \centerline{Quest'opera è distribuita con Licenza Creative Commons Attribuzione}
-  \centerline{Non commerciale 4.0 Internazionale \ccbynceu}
-  \centerline{Versione aggiornata al 26/06/2021}
+  \vspace{25em}
+
+  \centerline{\Large{Quest'opera è distribuita con Licenza Creative Commons Attribuzione}}
+  \centerline{\Large{Non commerciale 4.0 Internazionale \ccbynceu}}
+  \centerline{\Large{Versione aggiornata al 26/06/2021}}
 \end{doublespacing}
+
 \newpage
 
 
@@ -134,7 +137,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Dovuto alla riflessione interna \( \phi = 0 \)
   \item Dovuto alla riflessione esterna \( \phi = \pi \)
   \item Dovuto all'attraversamento di un mezzo \( \Delta \phi = \dfrac{2 \pi n}{\lambda_0} l \)
-  \item Della componente riflessa all'interfaccia:
+  \item Della componente riflessa all'interfaccia: \textbf{coefficienti di Fresnel}
         \begin{itemize}
           \item Coefficiente perpendicolare \( r_\perp = \dfrac{\cos(\theta_i) - \sqrt{\left( \sfrac{n_2}{n_1} \right) ^ 2 - \sin^2(\theta_i)}}{\cos(\theta_i) + \sqrt{\left( \sfrac{n_2}{n_1} \right) ^ 2 - \sin^2(\theta_i)}} \)
           \item Sfasamento perpendicolare \( \Phi_\perp = 2 \arctan \left[ \dfrac{ \sqrt{\sin^2(\theta_i) - \left( \sfrac{n_2}{n_1} \right) ^ 2 } }{ \cos(\theta_i) } \right] \)
@@ -179,7 +182,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 \subsection{Strato antiriflesso}
 \begin{itemize}
   \item Spessore \( d = \dfrac{\lambda_0}{n \cdot 4} = \dfrac{\lambda}{4} \)
-  \item Indice di rifrazione \( n_2 = \sqrt{n_1 n_3} \)
+  \item Indice di rifrazione \( \displaystyle n_2 = \sqrt{n_1 n_3} \)
   \item Riflettività \( \left( \dfrac{n_0 n_1 - n_2 }{n_0 n_1 + n_ 2} \right) ^ 2 \)
 \end{itemize}
 
@@ -260,16 +263,24 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 \newpage
 
 \section{Laser}
+
 \begin{itemize}
   \item Guadagno \( g = \dfrac{c^2}{8 \pi \nu^2 c^2 \tau_{sp} \Delta \nu} (N_2 - N_1) \)
   \item Condizione di soglia \( g_{th} = \alpha_t = \alpha_s + \dfrac{1}{2L} \ln\left(\dfrac{1}{R_1 R_2}\right) \), \( \alpha_s \) perdite interne
   \item Guadagno di soglia \( g_th = \dfrac{1}{2L} \ln\left(\dfrac{1}{R_1 R_2}\right)\)
+  \item Corrente di soglia \( P_o = n_{slope} (I - I_{th}) \)
   \item Guadagno del laser (sopra soglia) \( g = \dfrac{c^2}{8 \pi \nu^2 n ^ 2 \tau_{sp} \Delta \nu} (N_2 - N_1) \)
   \item Potenza di uscita \( P_{out} = \dfrac{N_{ph}}{2} \dfrac{c}{n} h \nu (1 - R_1) A \), \( A \) area della superficie del laser
         \begin{itemize}
           \item In funzione del flusso fotonico \( P_{out} = \dfrac{1}{2} \Phi_{ph} A h \nu_0 ( 1 - R_2) \)
         \end{itemize}
   \item Tempo di spegnimento del laser \( \tau_{ph} = \dfrac{n}{c \cdot \alpha_t} \)
+  \item Equazione di bilancio:
+        \begin{itemize}
+          \item Caso generale \( \dfrac{I - I_{th}}{q w l d} = \dfrac{n}{\tau_r} + c n N_{ph} \)
+          \item Condizione sopra soglia \( N_{ph} = \dfrac{\tau_{ph}}{q w l t} (I - I_{th}) \)
+          \item Condizione a soglia \( \dfrac {I_{th}}{q w l t} = \dfrac{n_{th}}{\tau_{ph} } \)
+        \end{itemize}
 \end{itemize}
 
 \subsection{Laser a gas}
@@ -283,7 +294,6 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 
 \subsection{Laser a stato solido}
 \begin{itemize}
-  \item Equazione del diodo \( \dfrac{I}{q w l d} = \dfrac{n}{\tau_r} + C \cdot n \cdot N_{\textnormal{ph}}\)
   \item Numero di fotoni \( N_{\textnormal{ph}} = \dfrac{\tau_{\textnormal{ph}}}{q w l d} ( I - I_{th}) \)
   \item Slope efficiency \( \textnormal{SE} = \dfrac{h c^2 \tau_{\textnormal{ph}}}{2 n  \lambda q L} \)
   \item Potenza in uscita \( P_0 = \textnormal{SE} \cdot (I - I_{\textnormal{th}} ) \)
@@ -319,7 +329,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
   \item Di conversione di potenza \( \eta_{\textnormal{pce}} = \dfrac{P_{\textnormal{out}}}{V I} = \eta_{\textnormal{eqe}} \cdot \dfrac{h \nu}{q V}\)
   \item Luminosa \( \eta_{\textnormal{le}} = \dfrac{\Phi_v}{V I} \)
   \item Larghezza spettro di emissione \( \Delta \nu_{\sfrac{1}{2}} = \dfrac{m k T}{h} \), \(m \approx 3 \)
-  \item Larghezza spettro di emissione \( \Delta \lambda_{\sfrac{1}{2}} = \dfrac{m k T \lambda_0^2}{h c} \), \(m \approx 3 \)
+  \item Larghezza spettro di emissione \( \Delta \lambda_{\sfrac{1}{2}} = \dfrac{m k T}{h c} \lambda_0^2 \), \(m \approx 3 \)
 \end{itemize}
 
 \newpage
@@ -354,71 +364,71 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
 
 \section{Domande di teoria dei temi di esame}
 
-\subsection{01/02/2021}
+\subsection{T.E. 01/02/2021}
 \begin{enumerate}
   \item Si illustri il bilancio tra assorbimento, emissione spontanea ed emissione stimolata. Sulla base di questo bilancio,
         si ricavino le condizioni di funzionamento di un laser.
   \item Si ricavi il teorema di Shockley-Ramo nei fotodiodi.
 \end{enumerate}
 
-\subsection{19/02/2021}
+\subsection{T.E. 19/02/2021}
 \begin{enumerate}
   \item Si discutano gli effetti di dispersione in una fibra ottica, distinguendo i vari contributi alla dispersione.
   \item Si illustrino i meccanismi di generazione e ricombinazione nei semiconduttori, discutendo le rispettive applicazioni in optoelettronica e i requisiti in termini di band gap.
 \end{enumerate}
 
-\subsection{04/09/2020}
+\subsection{T.E. 04/09/2020}
 \begin{enumerate}
   \item Illustrare il principio di funzionamento di un laser ad eterogiunzione.
   \item Illustrare le caratteristiche I/V di un fotodiodo in assenza e presenza di illuminazione (hv > EG). Nel secondo caso descrivere il comportamento del fotodiodo per tensione negativa, tensione nulla e corrente nulla.
 \end{enumerate}
 
-\subsection{20/07/2020}
+\subsection{T.E. 20/07/2020}
 \begin{enumerate}
   \item Si definisca il V-number per una guida d’onda e per una fibra ottica, illustrando come da esso si possa risalire al numero di modi di propagazione.
   \item Si illustri il principio di funzionamento di un laser per il caso a 3 livelli e quello a 4 livelli, fornendo esempi pratici per entrambi.
 \end{enumerate}
 
-\subsection{22/06/2020}
+\subsection{T.E. 22/06/2020}
 \begin{enumerate}
-  \item Illustrare i materiali semiconduttori impiegati nei LED, in particolare le considerazioni che portano alla scelta del materiale in relazione all’efficienza e al colore.
+  \item Illustrare i materiali semiconduttori impiegati nei LED, in particolare le considerazioni che portano alla scelta del materiale in relazione all'efficienza e al colore.
   \item Illustrare il principio di funzionamento di un fotodiodo e la metrica usata per valutare la sua efficienza.
 \end{enumerate}
 
-\subsection{13/02/2020}
+\subsection{T.E. 13/02/2020}
 \begin{enumerate}
   \item Descrivere la struttura ed il principio di funzionamento del laser He-Ne, illustrando le principali caratteristiche della radiazione emessa.
   \item Illustrare il principio di funzionamento di un fotodiodo pn mediante la dimostrazione del teorema di Ramo. \textit{Nota: teorema Shockley-Ramo.}
 \end{enumerate}
 
-\subsection{31/01/2020}
+\subsection{T.E. 31/01/2020}
 \begin{enumerate}
-  \item Discutere il problema dell’attenuazione nelle fibre ottiche, mostrando come esso limiti la massima lunghezza di
+  \item Discutere il problema dell'attenuazione nelle fibre ottiche, mostrando come esso limiti la massima lunghezza di
         una fibra in un sistema di comunicazione.
   \item Illustrare i fenomeni di allargamento della riga di guadagno in una sorgente laser.
 \end{enumerate}
 
-\subsection{29/07/2020}
+\subsection{T.E. 29/07/2020}
 \begin{enumerate}
   \item Discutere il principio di funzionamento dei laser a 3 livelli e 4 livelli.
   \item Descrivere la struttura ed il principio di funzionamento di un fotodiodo a valanga, mettendo in luce i vantaggi
         rispetto ad un fotodiodo pin.
 \end{enumerate}
 
-\subsection{20/02/2019}
+\subsection{T.E. 20/02/2019}
 \begin{enumerate}
   \item Si illustrino la struttura e il funzionamento dei LED bianchi.
   \item Illustrare il principio di funzionamento di un fotodiodo pn mediante la dimostrazione del teorema di Ramo. \textit{Nota: teorema Shockley-Ramo.}
 \end{enumerate}
 
-\subsection{12/09/2019}
+\subsection{T.E. 12/09/2019}
 \begin{enumerate}
   \item Descrivere il principio di funzionamento di una guida d’onda planare, illustrando la condizione di propagazione
         guidata e discutendo il numero di modi di propagazione.
-  \item Definire l’efficienza luminosa di un LED, discutendo la differenza rispetto ad una sorgente ad incandescenza.
+  \item Definire l'efficienza luminosa di un LED, discutendo la differenza rispetto ad una sorgente ad incandescenza.
 \end{enumerate}
 
-\subsection{28/06/2019}
+\subsection{T.E. 28/06/2019}
 \begin{enumerate}
   \item Illustrare il fenomeno della dispersione in una fibra ottica, mostrandone l’impatto sul bit rate di un sistema di
         comunicazione.
@@ -426,7 +436,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
         rispetto a strutture a doppia eterogiunzione.
 \end{enumerate}
 
-\subsection{04/02/2019}
+\subsection{T.E. 04/02/2019}
 \begin{enumerate}
   \item Illustrare i meccanismi di allargamento della riga di guadagno ottico nelle sorgenti laser, riferendosi in particolare
         ai laser He-Ne e Nd3+:YAG.
@@ -434,14 +444,14 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
         due categorie si presta meglio come sorgente luminosa.
 \end{enumerate}
 
-\subsection{23/07/2019}
+\subsection{T.E. 23/07/2019}
 \begin{enumerate}
   \item Illustrare il principio di funzionamento di una sorgente laser, descrivendo le principali caratteristiche della
         radiazione emessa.
   \item Discutere la scelta dei materiali nelle sorgenti LED, in particolare per quanto riguarda il colore della luce emessa.
 \end{enumerate}
 
-\subsection{05/09/2018}
+\subsection{T.E. 05/09/2018}
 \begin{enumerate}
   \item Discutere il problema dell’attenuazione in una fibra ottica, descrivendone l’impatto sulla scelta della lunghezza
         d’onda di lavoro in un sistema di comunicazione in fibra.
@@ -449,28 +459,28 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
         rivelazione di fotoni.
 \end{enumerate}
 
-\subsection{29/06/2018}
+\subsection{T.E. 29/06/2018}
 \begin{enumerate}
   \item Discutere il trade-off tra dispersione ed accoppiamento di potenza in una fibra ottica step-index.
   \item Descrivere la struttura e il principio di funzionamento di un diodo laser VCSEL, mettendo in luce i vantaggi
         rispetto ad una struttura ad emissione laterale.
 \end{enumerate}
 
-\subsection{12/02/2018}
+\subsection{T.E. 12/02/2018}
 \begin{enumerate}
   \item Illustrare i vantaggi di una struttura a quantum well nella generazione di luce coerente e non coerente.
   \item Illustrare il principio di funzionamento di una cella fotovoltaica e discutere l’effetto delle resistenze parassite sulla
         curva caratteristica I-V.
 \end{enumerate}
 
-\subsection{27/06/2017}
+\subsection{T.E. 27/06/2017}
 \begin{enumerate}
   \item Illustrare i fattori che limitano l’efficienza di conversione nelle celle solari.
   \item Illustrare i meccanismi di generazione di luce nei semiconduttori a gap diretto e indiretto, mostrando quale delle
         due categorie si presta meglio come sorgente luminosa.
 \end{enumerate}
 
-\subsection{20/07/2017}
+\subsection{T.E. 20/07/2017}
 \begin{enumerate}
   \item Illustrare i fattori che limitano la massima lunghezza di una fibra ottica in un sistema di comunicazione,
         evidenziando l’origine fisica dei vari contributi e le possibili soluzioni.
@@ -478,7 +488,7 @@ In questo formulario ho cercato prima di tutto di mettere le formule importanti 
         funzionamento, materiali e struttura del dispositivo.
 \end{enumerate}
 
-\subsection{}
+\subsection{T.E. 27/06/2017}
 \begin{enumerate}
   \item Descrivere il funzionamento del laser He-Ne: livelli energetici, pompaggio, meccanismo di emissione laser, e
         spettro d’uscita.
